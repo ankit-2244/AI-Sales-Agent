@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Sales Agent</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="mark">AI</div>
+      <div>
+        <h1>AI Sales Agent</h1>
+        <p>Ankit · RAG · qualify · CRM · book a demo</p>
+      </div>
+    </div>
+    <div class="pills">
+      <span class="pill" id="apiPill">API…</span>
+      <span class="pill" id="threadPill"></span>
+    </div>
+  </header>
+
+  <main>
+    <aside>
+      <h2>Try a flow</h2>
+      <button class="chip" data-q="Does the agent work with a CRM?">Knowledge</button>
+      <button class="chip" data-q="Please qualify this lead. My name is Ankit. Company: Acme Technologies. We need AI sales automation. Our budget is $50,000 per year.">Qualify lead</button>
+      <button class="chip" data-q="Please add me to the CRM. My name is Ankit, my email is ankit@example.com, and I work at Acme Technologies.">Add to CRM</button>
+      <button class="chip" data-q="I want to book a demo. My name is Ankit, my email is ankit@example.com, and I prefer tomorrow at 11 AM.">Book demo</button>
+      <p class="hint">Talks to Ankit’s FastAPI <code>POST /chat</code>. Same thread stays in one conversation.</p>
+    </aside>
+
+    <section class="chat">
+      <div class="msgs" id="msgs">
+        <div class="bot">I’m the AI sales assistant. Ask about the product, qualify a lead, add someone to the CRM, or book a demo.</div>
+      </div>
+      <div class="composer">
+        <button type="button" class="mic" id="micBtn" title="Speak">Mic</button>
+        <textarea id="q" rows="2" placeholder="Type a message, or click Mic…"></textarea>
+        <button id="sendBtn">Send</button>
+      </div>
+      <div class="listen" id="listenBar"></div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

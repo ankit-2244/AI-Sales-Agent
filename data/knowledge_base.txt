@@ -1,0 +1,26 @@
+[COMPANY]
+The Sales Agent is designed to turn a company website into a grounded sales representative on a live video call.
+
+[PRODUCT]
+The system is intended to help companies handle inbound interest and provide 24/7 sales conversations.
+
+[LEAD_QUALIFICATION]
+The agent should qualify leads, book demos, capture leads, and synchronize them to a CRM idempotently.
+
+[KNOWLEDGE]
+The system should ingest a company website, crawl and render pages, extract and classify information, and pull linked PDFs.
+
+[GROUNDING]
+The system should build a sourced company profile. Every fact should carry a source URL. Unsourced fields should be dropped and never inferred.
+
+[RETRIEVAL]
+The knowledge should be indexed for retrieval using semantic chunking, hybrid vector and BM25 search, and reranking.
+
+[GUARDRAILS]
+The system should have guardrails against invented pricing, discounts, commercial terms, delivery-date commitments, unsupported capability claims, unsupported compliance claims, and claims that cannot be traced to retrieved information.
+
+[AI_DISCLOSURE]
+The agent should disclose that it is an AI.
+
+[EVALUATION]
+The V1 target for groundedness is at least 95 percent. The V1 target for fabricated prices is zero.
