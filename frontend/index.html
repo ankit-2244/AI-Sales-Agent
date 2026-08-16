@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Sales Agent</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="mark">AI</div>
+      <div>
+        <h1>AI Sales Agent</h1>
+        <p>Say hi → fill fields → paste a site link → ask, score, CRM, or book</p>
+      </div>
+    </div>
+    <div class="pills">
+      <span class="pill" id="apiPill">API…</span>
+      <span class="pill" id="intentPill">intent —</span>
+    </div>
+  </header>
+
+  <main>
+    <aside>
+      <h2>Collected lead</h2>
+      <ul class="fields" id="fields"></ul>
+      <h2>Try</h2>
+      <button class="chip" data-q="hi">Say hi</button>
+      <button class="chip" data-q="https://basecamp.com">Ingest Basecamp</button>
+      <button class="chip" data-q="What plans do you have and how much do they cost?">Ask site pricing</button>
+      <button class="chip" data-q="Does the agent work with a CRM?">Ask knowledge</button>
+      <button class="chip" data-q="Please add me to the CRM">Add to CRM</button>
+      <button class="chip" data-q="I want to book a demo tomorrow at 11 AM">Book demo</button>
+    </aside>
+
+    <section class="chat">
+      <div class="msgs" id="msgs">
+        <div class="bot">Say <b>hi</b> to start. I’ll ask for name, email, company, use case, and budget. After you send one field, I’ll only ask for what’s still missing.</div>
+      </div>
+      <div class="composer">
+        <textarea id="q" rows="2" placeholder="Type hi, or your name…"></textarea>
+        <button id="sendBtn">Send</button>
+      </div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

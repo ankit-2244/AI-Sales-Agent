@@ -1,0 +1,35 @@
+# Virtual environment
+.venv/
+.venv-mac/
+venv/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local databases / temporary files
+*.db
+*.sqlite
+*.sqlite3
+
+# Test/cache files
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+chroma_db/
